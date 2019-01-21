@@ -9,7 +9,6 @@ public class MyStudentList extends StudentList implements Aggregate{
         super(studentCount);
     }
 
-
     @Override
     public Itelator Iterator() {
         return new MyStudentListIterator(this);
