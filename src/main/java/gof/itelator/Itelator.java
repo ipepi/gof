@@ -1,4 +1,4 @@
-package gof.italator;
+package gof.itelator;
 
 public interface Itelator{
     public boolean hasNext();

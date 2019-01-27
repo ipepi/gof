@@ -1,4 +1,4 @@
-package gof.italator;
+package gof.itelator;
 
 public class StudentList{
     protected Student[] students;

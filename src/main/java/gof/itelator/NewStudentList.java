@@ -1,4 +1,4 @@
-package gof.italator;
+package gof.itelator;
 
 import java.util.Vector;
 

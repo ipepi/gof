@@ -1,4 +1,4 @@
-package gof.italator;
+package gof.itelator;
 
 public class Student{
     private String name;

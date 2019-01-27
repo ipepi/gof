@@ -1,4 +1,4 @@
-package gof.italator;
+package gof.itelator;
 
 public class MyStudentList extends StudentList implements Aggregate{
     public MyStudentList(){
