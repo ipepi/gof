@@ -1,5 +1,5 @@
 package gof;
-import gof.italator.*;
+import gof.itelator.*;
 
 
 public class App 
