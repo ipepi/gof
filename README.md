@@ -6,3 +6,6 @@ Javaのデザインパターンを学ぶために、GoFの２３このデザイ�
 <http://www.techscore.com/tech/DesignPattern/index.html/>
 
 * Itelator
+    * 構造化されたオブジェクトに順次アクセスさせる場合に適用させることで、変更範囲が少なくなる
+* Adapter
+    * インターフェースに互換性の無いクラス同士を組み合わせるのに利用できる
