@@ -1,4 +1,5 @@
 package gof;
+import gof.factorymethod.ImagawasCutPrint;
 import gof.itelator.*;
 import gof.templatemethod.TanakasWoodCutPrint;
 
@@ -9,7 +10,8 @@ public class App
     {
         //itelator();
         //adapter();
-        templatemethod();
+        //templateMethod();
+        factoryMethod();
     }
 
 
@@ -28,8 +30,13 @@ public class App
         gof.adapter.Teacher.callHanako();
     }
 
-    public static void templatemethod(){
+    public static void templateMethod(){
         TanakasWoodCutPrint tanakasWoodCutPrint = new TanakasWoodCutPrint();
         tanakasWoodCutPrint.createWoodCutPrint();
+    }
+
+    public static void factoryMethod(){
+        ImagawasCutPrint imagawasCutPrint = new ImagawasCutPrint();
+        imagawasCutPrint.createWoodCutPrint();
     }
 }
