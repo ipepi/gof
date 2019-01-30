@@ -1,5 +1,6 @@
 package gof;
 
+import gof.abstractfactory.MizutakiSample;
 import gof.builder.Builder;
 import gof.builder.Director;
 import gof.builder.SaltWater;
@@ -17,7 +18,8 @@ public class App
         //adapter();
         //templateMethod();
         //factoryMethod();
-        builder();
+        //builder();
+        abstractFactory();
     }
 
 
@@ -55,5 +57,9 @@ public class App
         System.out.println(saltWater.salt);
         System.out.println(saltWater.water);
 
+    }
+
+    public static void abstractFactory(){
+        MizutakiSample.mizutaki();
     }
 }
