@@ -7,6 +7,7 @@ import gof.builder.Builder;
 import gof.builder.Director;
 import gof.builder.SaltWater;
 import gof.builder.SaltWaterBuilder;
+import gof.composite.Test;
 import gof.factorymethod.ImagawasCutPrint;
 import gof.itelator.*;
 import gof.strategy.AgeComparator;
@@ -26,7 +27,8 @@ public class App
         //builder();
         //abstractFactory();
         //bridge();
-        strategy();
+        //strategy();
+        composite();
     }
 
 
@@ -83,5 +85,9 @@ public class App
         
         MyClass myClass = new MyClass(new AgeComparator());
         System.out.println(myClass.comparator(h1, h2));
+    }
+
+    public static void composite(){
+        gof.composite.Test.removeTest();
     }
 }
