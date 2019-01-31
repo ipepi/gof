@@ -2,7 +2,6 @@ package gof;
 
 import gof.abstractfactory.MizutakiSample;
 import gof.bridge.BubbleSorter;
-import gof.bridge.SorterImple;
 import gof.bridge.TimerSorter;
 import gof.builder.Builder;
 import gof.builder.Director;
@@ -10,6 +9,9 @@ import gof.builder.SaltWater;
 import gof.builder.SaltWaterBuilder;
 import gof.factorymethod.ImagawasCutPrint;
 import gof.itelator.*;
+import gof.strategy.AgeComparator;
+import gof.strategy.Human;
+import gof.strategy.MyClass;
 import gof.templatemethod.TanakasWoodCutPrint;
 
 
@@ -23,7 +25,8 @@ public class App
         //factoryMethod();
         //builder();
         //abstractFactory();
-        bridge();
+        //bridge();
+        strategy();
     }
 
 
@@ -72,5 +75,13 @@ public class App
         TimerSorter timerSorter = new TimerSorter(new BubbleSorter());
         Object[] obj = new Object[1];
         timerSorter.timeSorter(obj);
+    }
+
+    public static void strategy(){
+        Human h1 = new Human("Taro", 170, 60, 25);
+        Human h2 = new Human("Jiro", 180, 750, 22);
+        
+        MyClass myClass = new MyClass(new AgeComparator());
+        System.out.println(myClass.comparator(h1, h2));
     }
 }
