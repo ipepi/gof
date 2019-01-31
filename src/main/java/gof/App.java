@@ -7,13 +7,17 @@ import gof.builder.Builder;
 import gof.builder.Director;
 import gof.builder.SaltWater;
 import gof.builder.SaltWaterBuilder;
-import gof.composite.Test;
+import gof.decorator.CashewNutsToppingIcecream;
+import gof.decorator.GreenTeaIcecream;
+import gof.decorator.Icecream;
+import gof.decorator.VanillaIcecream;
 import gof.factorymethod.ImagawasCutPrint;
 import gof.itelator.*;
 import gof.strategy.AgeComparator;
 import gof.strategy.Human;
 import gof.strategy.MyClass;
 import gof.templatemethod.TanakasWoodCutPrint;
+
 
 
 public class App 
@@ -28,7 +32,8 @@ public class App
         //abstractFactory();
         //bridge();
         //strategy();
-        composite();
+        //composite();
+        decorator();
     }
 
 
@@ -90,4 +95,14 @@ public class App
     public static void composite(){
         gof.composite.Test.removeTest();
     }
+
+    public static void decorator(){
+        Icecream ice1 = new CashewNutsToppingIcecream(new VanillaIcecream());
+        System.out.println(ice1.getName());
+        Icecream ice2 = new CashewNutsToppingIcecream(new GreenTeaIcecream());
+        System.out.println(ice2.getName());
+        
+
+
+        }
 }
