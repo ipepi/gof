@@ -1,6 +1,9 @@
 package gof;
 
 import gof.abstractfactory.MizutakiSample;
+import gof.bridge.BubbleSorter;
+import gof.bridge.SorterImple;
+import gof.bridge.TimerSorter;
 import gof.builder.Builder;
 import gof.builder.Director;
 import gof.builder.SaltWater;
@@ -19,7 +22,8 @@ public class App
         //templateMethod();
         //factoryMethod();
         //builder();
-        abstractFactory();
+        //abstractFactory();
+        bridge();
     }
 
 
@@ -61,5 +65,12 @@ public class App
 
     public static void abstractFactory(){
         MizutakiSample.mizutaki();
+    }
+
+    public static void bridge(){
+        
+        TimerSorter timerSorter = new TimerSorter(new BubbleSorter());
+        Object[] obj = new Object[1];
+        timerSorter.timeSorter(obj);
     }
 }
