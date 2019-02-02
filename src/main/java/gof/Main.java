@@ -1,5 +1,7 @@
 package gof;
 
+import java.util.List;
+
 import gof.abstractfactory.MizutakiSample;
 import gof.bridge.BubbleSorter;
 import gof.bridge.TimerSorter;
@@ -17,10 +19,13 @@ import gof.strategy.AgeComparator;
 import gof.strategy.Human;
 import gof.strategy.MyClass;
 import gof.templatemethod.TanakasWoodCutPrint;
+import gof.visitor.RookieTeacher;
+import gof.visitor.SuzukiHome;
+import gof.visitor.TanakaHome;
 
 
 
-public class App 
+public class Main 
 {
     public static void main( String[] args )
     {
@@ -33,7 +38,8 @@ public class App
         //bridge();
         //strategy();
         //composite();
-        decorator();
+        //decorator();
+        visitor();
     }
 
 
@@ -101,8 +107,18 @@ public class App
         System.out.println(ice1.getName());
         Icecream ice2 = new CashewNutsToppingIcecream(new GreenTeaIcecream());
         System.out.println(ice2.getName());
-        
-
-
         }
+
+    public static void visitor(){
+        List students = null;
+        //students.add(new TanakaHome());
+        //students.add(new TanakaHome());
+
+        RookieTeacher rookieTeacher = new RookieTeacher(students);
+
+        rookieTeacher.visit(new SuzukiHome());
+        rookieTeacher.visit(new TanakaHome());
+
+
+    }
 }
