@@ -9,6 +9,11 @@ import gof.builder.Builder;
 import gof.builder.Director;
 import gof.builder.SaltWater;
 import gof.builder.SaltWaterBuilder;
+import gof.chainresponsible.ClassTeacher;
+import gof.chainresponsible.Level;
+import gof.chainresponsible.Question;
+import gof.chainresponsible.Responsible;
+import gof.chainresponsible.Student;
 import gof.decorator.CashewNutsToppingIcecream;
 import gof.decorator.GreenTeaIcecream;
 import gof.decorator.Icecream;
@@ -39,7 +44,8 @@ public class Main
         //strategy();
         //composite();
         //decorator();
-        visitor();
+        //visitor();
+        chainresponsibility();
     }
 
 
@@ -118,7 +124,15 @@ public class Main
 
         rookieTeacher.visit(new SuzukiHome());
         rookieTeacher.visit(new TanakaHome());
+    }
 
+    public static void chainresponsibility(){
+        Responsible nakata = new Student("中川");
+        Responsible rookie = new ClassTeacher("クラスの担任");
+        nakata.setNext(rookie);
+        nakata.putQuestion(new Question("のみものは持っていっていい？", new Level(1)));
+        nakata.putQuestion(new Question("おやつは持っていっていい？", new Level(2)));
+        nakata.putQuestion(new Question("携帯は持っていて良い？", new Level(3)));
 
     }
 }
