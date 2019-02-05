@@ -21,6 +21,7 @@ import gof.decorator.VanillaIcecream;
 import gof.facade.Visitor;
 import gof.factorymethod.ImagawasCutPrint;
 import gof.itelator.*;
+import gof.mediator.Nitta;
 import gof.strategy.AgeComparator;
 import gof.strategy.Human;
 import gof.strategy.MyClass;
@@ -47,7 +48,8 @@ public class Main
         //decorator();
         //visitor();
         //chainresponsibility();
-        facade();
+        //facade();
+        mediator();
     }
 
 
@@ -140,5 +142,10 @@ public class Main
 
     public static void facade(){
         Visitor.visit();
+    }
+
+    public static void mediator(){
+        Nitta nitta = new Nitta();
+        nitta.needAdvice();
     }
 }
