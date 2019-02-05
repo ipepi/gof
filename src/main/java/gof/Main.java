@@ -18,6 +18,7 @@ import gof.decorator.CashewNutsToppingIcecream;
 import gof.decorator.GreenTeaIcecream;
 import gof.decorator.Icecream;
 import gof.decorator.VanillaIcecream;
+import gof.facade.Visitor;
 import gof.factorymethod.ImagawasCutPrint;
 import gof.itelator.*;
 import gof.strategy.AgeComparator;
@@ -45,7 +46,8 @@ public class Main
         //composite();
         //decorator();
         //visitor();
-        chainresponsibility();
+        //chainresponsibility();
+        facade();
     }
 
 
@@ -134,5 +136,9 @@ public class Main
         nakata.putQuestion(new Question("おやつは持っていっていい？", new Level(2)));
         nakata.putQuestion(new Question("携帯は持っていて良い？", new Level(3)));
 
+    }
+
+    public static void facade(){
+        Visitor.visit();
     }
 }
