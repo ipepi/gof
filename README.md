@@ -40,3 +40,5 @@ Javaのデザインパターンを学ぶために、GoFの２３このデザイ�
     [デザインパターン「Observer」](https://qiita.com/shoheiyokoyama/items/d4b844ed29f84a80795b#observer)を参考にしました。
 * Memento
     * インスタンスの状態のスナップショットを保存して、あとからその状態を復元できる状態にする
+* State
+    * 状態をクラスとして表現するパターン。if文の制御が少なくなる。

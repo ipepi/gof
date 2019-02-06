@@ -29,6 +29,9 @@ import gof.observer.GraphObserver;
 import gof.observer.NumberGenerator;
 import gof.observer.Observer;
 import gof.observer.RandomNumberGenerator;
+import gof.state.LoveInState;
+import gof.state.NormalState;
+import gof.state.Yumi;
 import gof.strategy.AgeComparator;
 import gof.strategy.Human;
 import gof.strategy.MyClass;
@@ -58,7 +61,8 @@ public class Main
         //facade();
         //mediator();
         //observer();
-        memento();
+        //memento();
+        state();
     }
 
 
@@ -169,5 +173,15 @@ public class Main
 
     public static void memento(){
         Wadayama.wadayamaCals();
+    }
+
+    public static void state(){
+        Yumi yumi = new Yumi();
+        yumi.changeState(new NormalState());
+        System.out.println(yumi.morningGeet());
+        System.out.println(yumi.getProtectionForCold());
+        yumi.changeState(new LoveInState());
+        System.out.println(yumi.morningGeet());
+        System.out.println(yumi.getProtectionForCold());
     }
 }
