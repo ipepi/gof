@@ -35,3 +35,6 @@ Javaのデザインパターンを学ぶために、GoFの２３このデザイ�
     * 多くのロジックを簡素化して、一つのシンプルな関数呼び出しにまとめること
 * Mediator
     * 複数のオブジェクト間の調整を行う。例えば複雑な条件を満たす必要のある判定処理などのインターフェースに利用できる
+* Observer
+    * 観察される側（Subject）の状態が変化した際に、観察側（Observer）に通知されるパターン。MVCもでるのMVの関係性。
+    [デザインパターン「Observer」](https://qiita.com/shoheiyokoyama/items/d4b844ed29f84a80795b#observer)を参考にしました。

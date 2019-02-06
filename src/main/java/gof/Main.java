@@ -1,5 +1,6 @@
 package gof;
 
+import java.awt.GradientPaint;
 import java.util.List;
 
 import gof.abstractfactory.MizutakiSample;
@@ -22,6 +23,11 @@ import gof.facade.Visitor;
 import gof.factorymethod.ImagawasCutPrint;
 import gof.itelator.*;
 import gof.mediator.Nitta;
+import gof.observer.DegitObserver;
+import gof.observer.GraphObserver;
+import gof.observer.NumberGenerator;
+import gof.observer.Observer;
+import gof.observer.RandomNumberGenerator;
 import gof.strategy.AgeComparator;
 import gof.strategy.Human;
 import gof.strategy.MyClass;
@@ -49,7 +55,8 @@ public class Main
         //visitor();
         //chainresponsibility();
         //facade();
-        mediator();
+        //mediator();
+        observer();
     }
 
 
@@ -147,5 +154,14 @@ public class Main
     public static void mediator(){
         Nitta nitta = new Nitta();
         nitta.needAdvice();
+    }
+
+    public static void observer(){
+        NumberGenerator generator = new RandomNumberGenerator();
+        Observer degitObserver = new DegitObserver();
+        Observer graphObserver = new GraphObserver();
+        generator.addaObserver(degitObserver);
+        generator.addaObserver(graphObserver);
+        generator.execute();
     }
 }
