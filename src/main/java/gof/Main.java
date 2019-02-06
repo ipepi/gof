@@ -23,6 +23,7 @@ import gof.facade.Visitor;
 import gof.factorymethod.ImagawasCutPrint;
 import gof.itelator.*;
 import gof.mediator.Nitta;
+import gof.memento.Wadayama;
 import gof.observer.DegitObserver;
 import gof.observer.GraphObserver;
 import gof.observer.NumberGenerator;
@@ -56,7 +57,8 @@ public class Main
         //chainresponsibility();
         //facade();
         //mediator();
-        observer();
+        //observer();
+        memento();
     }
 
 
@@ -163,5 +165,9 @@ public class Main
         generator.addaObserver(degitObserver);
         generator.addaObserver(graphObserver);
         generator.execute();
+    }
+
+    public static void memento(){
+        Wadayama.wadayamaCals();
     }
 }

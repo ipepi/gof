@@ -38,3 +38,5 @@ Javaのデザインパターンを学ぶために、GoFの２３このデザイ�
 * Observer
     * 観察される側（Subject）の状態が変化した際に、観察側（Observer）に通知されるパターン。MVCもでるのMVの関係性。
     [デザインパターン「Observer」](https://qiita.com/shoheiyokoyama/items/d4b844ed29f84a80795b#observer)を参考にしました。
+* Memento
+    * インスタンスの状態のスナップショットを保存して、あとからその状態を復元できる状態にする
