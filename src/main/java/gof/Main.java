@@ -21,6 +21,7 @@ import gof.decorator.Icecream;
 import gof.decorator.VanillaIcecream;
 import gof.facade.Visitor;
 import gof.factorymethod.ImagawasCutPrint;
+import gof.flyweight.HumanLetter;
 import gof.itelator.*;
 import gof.mediator.Nitta;
 import gof.memento.Wadayama;
@@ -62,7 +63,8 @@ public class Main
         //mediator();
         //observer();
         //memento();
-        state();
+        //state();
+        lightWeight();
     }
 
 
@@ -183,5 +185,10 @@ public class Main
         yumi.changeState(new LoveInState());
         System.out.println(yumi.morningGeet());
         System.out.println(yumi.getProtectionForCold());
+    }
+
+    public static void lightWeight(){
+        HumanLetter a = new HumanLetter("a");
+        System.out.print(a.letter);
     }
 }
