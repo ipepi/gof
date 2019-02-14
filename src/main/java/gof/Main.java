@@ -30,6 +30,7 @@ import gof.observer.GraphObserver;
 import gof.observer.NumberGenerator;
 import gof.observer.Observer;
 import gof.observer.RandomNumberGenerator;
+import gof.proxy.Fujiwara;
 import gof.state.LoveInState;
 import gof.state.NormalState;
 import gof.state.Yumi;
@@ -64,7 +65,8 @@ public class Main
         //observer();
         //memento();
         //state();
-        lightWeight();
+        //lightWeight();
+        proxy();
     }
 
 
@@ -190,5 +192,13 @@ public class Main
     public static void lightWeight(){
         HumanLetter a = new HumanLetter("a");
         System.out.print(a.letter);
+    }
+
+    public static void proxy(){
+        Fujiwara fujiwara = new Fujiwara();
+
+        fujiwara.question1();
+        fujiwara.question2();
+        fujiwara.question3();
     }
 }
