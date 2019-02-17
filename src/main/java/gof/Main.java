@@ -15,6 +15,11 @@ import gof.chainresponsible.Level;
 import gof.chainresponsible.Question;
 import gof.chainresponsible.Responsible;
 import gof.chainresponsible.Student;
+import gof.command.AddSaltCommand;
+import gof.command.AddWaterCommand;
+import gof.command.Beaker;
+import gof.command.Command;
+import gof.command.MakeSaltWaterCommand;
 import gof.decorator.CashewNutsToppingIcecream;
 import gof.decorator.GreenTeaIcecream;
 import gof.decorator.Icecream;
@@ -66,7 +71,8 @@ public class Main
         //memento();
         //state();
         //lightWeight();
-        proxy();
+        //proxy();
+        command();
     }
 
 
@@ -200,5 +206,19 @@ public class Main
         fujiwara.question1();
         fujiwara.question2();
         fujiwara.question3();
+    }
+
+    public static void command(){
+        Command addSaltCommand = new AddSaltCommand();
+        Command addWaterCommand = new AddWaterCommand();
+        Command makeSaltWater = new MakeSaltWaterCommand();
+
+        addSaltCommand.setBeaker(new Beaker(100,0));
+        addWaterCommand.setBeaker(new Beaker(0,10));
+        makeSaltWater.setBeaker(new Beaker(90,10));
+
+        addSaltCommand.execute();
+        addWaterCommand.execute();
+        makeSaltWater.execute();
     }
 }
