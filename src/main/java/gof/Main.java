@@ -27,6 +27,7 @@ import gof.decorator.VanillaIcecream;
 import gof.facade.Visitor;
 import gof.factorymethod.ImagawasCutPrint;
 import gof.flyweight.HumanLetter;
+import gof.interpreter.Sample;
 import gof.itelator.*;
 import gof.mediator.Nitta;
 import gof.memento.Wadayama;
@@ -72,7 +73,8 @@ public class Main
         //state();
         //lightWeight();
         //proxy();
-        command();
+        //command();
+        interapter();
     }
 
 
@@ -220,5 +222,9 @@ public class Main
         addSaltCommand.execute();
         addWaterCommand.execute();
         makeSaltWater.execute();
+    }
+
+    public static void interapter(){
+        Sample.hoge();
     }
 }
